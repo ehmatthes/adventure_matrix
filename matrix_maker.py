@@ -19,13 +19,13 @@ adventures = [{'name': 'Picnic Rock',
                    'phys': 9,
                    'time': 2},
 
-                  {'name': 'Totem Park',
-                   'phys': 1,
-                   'time': 2},
+                  {'name': 'Shelikof',
+                   'phys': 7,
+                   'time': 8},
 
-                  {'name': 'Totem Park',
-                   'phys': 1,
-                   'time': 2},
+                  {'name': 'Sam Sing',
+                   'phys': 2,
+                   'time': 8},
 
               ]
 
@@ -34,6 +34,10 @@ x = [dict['time'] for dict in adventures]
 labels = [dict['name'] for dict in adventures]
 
 fig, ax = plt.subplots()
+fig.suptitle('PHS Adventure Matrix')
+ax.set_xlabel('Time')
+ax.set_ylabel('Physical Difficulty')
+
 # Can just place labels, rather than plotting invisilbe points.
 #  See: http://stackoverflow.com/questions/14827650/pyplot-scatter-plot-marker-size
 ax.scatter(x,y, s=0)
